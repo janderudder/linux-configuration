@@ -1,0 +1,8 @@
+export HOST='localhost'
+
+export XDG_CONFIG_HOME="$HOME/.config"
+
+for File in "$XDG_CONFIG_HOME"/shell/*
+do
+	source "$File"
+done

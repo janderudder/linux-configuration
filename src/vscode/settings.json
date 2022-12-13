@@ -1,0 +1,67 @@
+{
+    "telemetry.telemetryLevel": "off",
+    "workbench.settings.enableNaturalLanguageSearch": false,
+    "update.showReleaseNotes": false,
+
+    "workbench.sideBar.location": "right",
+    "window.menuBarVisibility": "toggle",
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 60000,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+
+    "editor.smoothScrolling": true,
+    "editor.parameterHints.cycle": true,
+    "editor.renderLineHighlight": "all",
+    "editor.cursorStyle": "block-outline",
+    "editor.cursorBlinking": "phase",
+    "editor.fontFamily": "'Fira Code Light', 'Fira Code Retina', Consolas, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.rulers": [80],
+    "editor.insertSpaces": true,
+    "editor.renderWhitespace": "selection",
+    "editor.minimap.enabled": false,
+    "editor.find.seedSearchStringFromSelection": "selection",
+
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.autoReveal": false,
+
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.defaultProfile.linux": "bash",
+
+    "zenMode.hideTabs": false,
+
+    /**************************************************************************
+     * Language specific settings
+    *************************************************************************/
+     "[shellscript]": {
+        "editor.detectIndentation": false,
+        "editor.insertSpaces": false,
+        "editor.tabSize": 4,
+    },
+
+    "[html]": {
+        "html.autoClosingTags": false,
+        "emmet.excludeLanguages": [
+            "markdown",
+            "typescript",
+            "javascript"
+        ],
+    },
+
+    "[markdown]": {
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "strings": "on",
+            "other": "on"
+        }
+    },
+    "markdown.preview.fontSize": 16,
+
+    "clang-format.executable": "/usr/bin/clang-format",
+
+}
