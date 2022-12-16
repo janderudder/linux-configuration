@@ -3,8 +3,9 @@
     "workbench.settings.enableNaturalLanguageSearch": false,
     "update.showReleaseNotes": false,
 
-    "workbench.sideBar.location": "right",
     "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
 
     "files.autoSave": "afterDelay",
     "files.autoSaveDelay": 60000,
