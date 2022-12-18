@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function GenerateWindowsShortcuts
+GenerateWindowsShortcuts()
 {
 	local WinUserName=''
 	local PersonalDocsFolderName=''
