@@ -8,9 +8,10 @@ shopt -s direxpand  # hack solution to avoid the '$'' quoting behavior
 shopt -s histappend
 shopt -s lithist
 #shopt -s histverify
-export HISTCONTROL='ignoreboth'
-export HISTSIZE=8000
+export HISTFILE='~/.bash_history'
 export HISTFILESIZE=8000
+export HISTSIZE=8000
+export HISTCONTROL='ignoreboth'
 export HISTTIMEFORMAT='%d/%m '
 
 # locale settings
