@@ -1,0 +1,3 @@
+git config --list 								\
+	| grep --color=never ^alias. 				\
+	| sed -E 's/^alias\.(.*)=(.*)/\1 -> \2/g'
