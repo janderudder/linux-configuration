@@ -8,7 +8,7 @@ shopt -s direxpand  # hack solution to avoid the '$'' quoting behavior
 shopt -s histappend
 shopt -s lithist
 #shopt -s histverify
-export HISTFILE='~/.bash_history'
+export HISTFILE=~/.bash_history
 export HISTFILESIZE=8000
 export HISTSIZE=8000
 export HISTCONTROL='ignoreboth'
