@@ -1,35 +1,30 @@
 #!/bin/bash
 
-GenerateWindowsShortcuts()
-{
-	local WinUserName=''
-	local PersonalDocsFolderName=''
-	local DocFolderLines=''
+#
+# Paste output in `$XDG_CONFIG_HOME/shell/shortcuts.sh`
+#
+# Arguments
+# 	$1 windows user name
+# 	$2 (optional) name of custom documents folder
+#
 
-	[[ $# -eq 0 ]] && echo 'not enough arguments' >&2 \
-		&& return 1
+[[ $# -lt 1 ]] && echo 'not enough arguments' >&2 && exit 1
 
-	[[ $# -ne 0 ]] && WinUserName="$1"
-	shift
+wuser="$1"
+WUSER="${wuser^^}"
 
-	[[ $# -ne 0 ]] && PersonalDocsFolderName="$1"
-	shift
+if [[ -n $2 ]]; then
+	docShortcut="${WUSER}/'$2'"
+else
+	docShortcut="${WUSER}_UDOC"
+fi
 
-	if [[ -n $PersonalDocsFolderName ]]
-	then
-		DocFolderLines="export ${WinUserName^^}_UDOC=\"\$${WinUserName^^}/Documents\""
-		DocFolderLines+=$'\n'
-		DocFolderLines+="export ${WinUserName^^}_DOC=\"\$${WinUserName^^}/$PersonalDocsFolderName\""
-	else
-		DocFolderLines="export ${WinUserName^^}_DOC=\"\$${WinUserName^^}/Documents\""
-	fi
-
-	cat <<- DOC
-		export ${WinUserName^^}='/mnt/c/Users/${WinUserName^}'
-		$DocFolderLines
-		export ${WinUserName^^}_DEV="\$${WinUserName^^}/dev"
-		export ${WinUserName^^}_DOWNLOAD="\$${WinUserName^^}/Downloads"
-	DOC
-
-	return 0
-}
+# output
+cat <<-DOC
+	# Windows related paths
+	export ${WUSER}='/mnt/c/Users/${wuser}'
+	export ${WUSER}_UDOC="\$${WUSER}/Documents"
+	export ${WUSER}_DOC="\$${docShortcut}"
+	export ${WUSER}_DEV="\$${WUSER}/dev"
+	export ${WUSER}_DOWNLOAD="\$${WUSER}/Downloads"
+DOC
