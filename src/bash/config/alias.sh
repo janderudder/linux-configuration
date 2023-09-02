@@ -1,5 +1,6 @@
 # unix commands
 alias b='bat'
+alias cp='cp -i'
 alias dir='tree --noreport -aI ".git|node_modules"'
 alias dirn='tree --noreport -a'
 alias dir1='dir -L 1'
@@ -57,6 +58,7 @@ alias cxx='$CXX -std=c++20 -Wall -Wextra'
 alias npm='pnpm'
 alias ns='npm search'
 alias nf='npm info'
+alias c++filt='c++filt -t | sed -f $DEV/cpp/c++filt.sed'
 
 # git
 alias g='git'
