@@ -9,8 +9,8 @@ shopt -s histappend
 shopt -s lithist
 #shopt -s histverify
 export HISTFILE=~/.bash_history
-export HISTFILESIZE=8000
-export HISTSIZE=8000
+export HISTFILESIZE=64000
+export HISTSIZE=64000
 export HISTCONTROL='ignoreboth'
 export HISTTIMEFORMAT='%d/%m '
 
