@@ -4,7 +4,6 @@
 
 export EDITOR='nvim'
 export PAGER='less'
-export PNPM_HOME=~/.local/share/pnpm
 export PNPM_HOME="$HOME/.local/share/pnpm"
 
 set_c_compiler clang

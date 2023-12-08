@@ -2,7 +2,8 @@
 set -o noclobber    # avoid implicit overwrite by stream redirection
 shopt -s no_empty_cmd_completion
 shopt -s nullglob
-shopt -s direxpand  # hack solution to avoid the '$'' quoting behavior
+shopt -s direxpand  # hacky solution to avoid the '$'' quoting behavior
+shopt -s globstar   # enable recursive ** globbing pattern
 
 # Bash history settings
 shopt -s histappend
